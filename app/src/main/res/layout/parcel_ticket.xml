@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="5dp"
+    >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/list_item_background"
+            >
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:id="@+id/destinationholder"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/destinationholder"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:text="To: Nairobi"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/parcelTown"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From :Kisumu"
+                    android:id="@+id/parcelDestination"
+                    android:textSize="15sp"
+                    android:paddingTop="20dp"
+                    android:textColor="@color/light"
+                    android:paddingLeft="10dp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sender :0702164611"
+                android:paddingLeft="20dp"
+                android:id="@+id/parcelSender"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/destinationholder"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reciever :0702164611"
+                android:id="@+id/ParcelReciever"
+                android:paddingLeft="20dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/destinationholder"
+                android:layout_below="@+id/parcelSender"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ParcelReciever"
+                android:text="Weight"
+                android:textStyle="bold"
+                android:id="@+id/weight"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:fontFamily="casual"
+                android:layout_toRightOf="@+id/destinationholder"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:fontFamily="casual"
+                android:layout_below="@+id/weight"
+                android:paddingLeft="20dp"
+                android:id="@+id/ParcelWeight"
+                android:layout_toRightOf="@+id/destinationholder"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ParcelReciever"
+                android:text="Price"
+                android:textStyle="bold"
+                android:id="@+id/price"
+                android:paddingTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="casual"
+                android:layout_toRightOf="@+id/weight"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/parcelPrice"
+                android:layout_height="wrap_content"
+                android:text="13000"
+                android:fontFamily="casual"
+                android:layout_toRightOf="@+id/ParcelWeight"
+                android:layout_below="@+id/price"
+                android:paddingLeft="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="15sp"
+                />
+
+        </RelativeLayout>
+</LinearLayout>
