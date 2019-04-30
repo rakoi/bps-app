@@ -3,8 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:title="Username"
+        android:id="@+id/usernamelabel"
+        app:showAsAction="always"
+        />
+
+
+    <item
         android:title="Logout"
         android:id="@+id/logoutbtn"
         app:showAsAction="never"
         />
+
 </menu>

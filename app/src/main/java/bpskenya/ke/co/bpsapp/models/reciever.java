@@ -1,6 +1,6 @@
 package bpskenya.ke.co.bpsapp.models;
 
-public class Reciever {
+public class reciever {
 
     public int id;
     public String fname;
@@ -13,7 +13,7 @@ public class Reciever {
     public Parcel parcel;
 
 
-    public Reciever(String fname, String lname, String email, String phone, String address, String town, String businessname) {
+    public reciever(String fname, String lname, String email, String phone, String address, String town, String businessname) {
         this.fname = fname;
         this.lname = lname;
         this.email = email;
@@ -23,7 +23,7 @@ public class Reciever {
         this.businessname = businessname;
     }
 
-    public Reciever(int id, String fname, String lname, String email, String phone, String address, String town, String businessname) {
+    public reciever(int id, String fname, String lname, String email, String phone, String address, String town, String businessname) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;
@@ -34,7 +34,7 @@ public class Reciever {
         this.businessname = businessname;
     }
 
-    public Reciever() {
+    public reciever() {
     }
 
     public int getId() {

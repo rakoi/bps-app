@@ -31,6 +31,7 @@
            android:layout_width="280dp"
            android:layout_height="50dp"
            android:hint="email"
+           android:inputType="text|textNoSuggestions"
            android:id="@+id/email"
            android:background="@drawable/inputstyle"
            />
@@ -39,6 +40,7 @@
             android:layout_marginTop="10dp"
             android:layout_height="50dp"
             android:hint="password"
+            android:id="@+id/password"
             android:password="true"
             android:background="@drawable/inputstyle"
             />
@@ -48,6 +50,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/warningRed"
             android:gravity="center"
+            android:id="@+id/response"
             android:layout_gravity="center_horizontal"
             android:text=""
              />

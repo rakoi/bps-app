@@ -1,4 +1,6 @@
 package bpskenya.ke.co.bpsapp.models;
+import bpskenya.ke.co.bpsapp.models.reciever;
+import bpskenya.ke.co.bpsapp.models.sender;
 
 public class Parcel {
 
@@ -11,14 +13,14 @@ public class Parcel {
     public String paid;
     public String status;
     public String date;
-    public Sender sender;
-    public Reciever reciever;
+    public sender sender;
+    public  reciever reciever;
     public String encodedId;
 
     public Parcel() {
     }
 
-    public Parcel(int id, String description, int weight, int quantity, int price, String payment, String paid, String status, String date, Sender sender, Reciever reciever, String encodedId) {
+    public Parcel(int id, String description, int weight, int quantity, int price, String payment, String paid, String status, String date, bpskenya.ke.co.bpsapp.models.sender sender, bpskenya.ke.co.bpsapp.models.reciever reciever, String encodedId) {
         this.id = id;
         this.description = description;
         this.weight = weight;
@@ -105,19 +107,19 @@ public class Parcel {
         this.date = date;
     }
 
-    public Sender getSender() {
+    public bpskenya.ke.co.bpsapp.models.sender getSender() {
         return sender;
     }
 
-    public void setSender(Sender sender) {
+    public void setSender(bpskenya.ke.co.bpsapp.models.sender sender) {
         this.sender = sender;
     }
 
-    public Reciever getReciever() {
+    public bpskenya.ke.co.bpsapp.models.reciever getReciever() {
         return reciever;
     }
 
-    public void setReciever(Reciever reciever) {
+    public void setReciever(bpskenya.ke.co.bpsapp.models.reciever reciever) {
         this.reciever = reciever;
     }
 

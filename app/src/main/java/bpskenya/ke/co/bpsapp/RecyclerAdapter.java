@@ -8,16 +8,16 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import bpskenya.ke.co.bpsapp.models.Parcels;
+import bpskenya.ke.co.bpsapp.models.Parcel;
+
+
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-    ArrayList<Parcels> parcels=new ArrayList<>();
+    ArrayList<Parcel> parcels;
+    public RecyclerAdapter(ArrayList<Parcel> parcels) {
 
-    public RecyclerAdapter() {
-        for (int i=0;i<=10;i++){
-            parcels.add(new Parcels(i,"Nairobi","Meru","+254702164611","+25439898180","Random",10));
-        }
+      this.parcels=parcels;
     }
 
     @Override
@@ -30,12 +30,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.to.setText("To: "+parcels.get(position).to);
-        holder.from.setText("From :"+parcels.get(position).from);
-        holder.sender.setText("Sender :"+parcels.get(position).sender);
-        holder.reciever.setText("Consignee :"+parcels.get(position).reciever);
-        holder.weight.setText(String.valueOf(parcels.get(position).weight));
+
+        try {
+            String town="To :" +parcels.get(position).getReciever().getTown();
+            String weight=String.valueOf(parcels.get(position).getWeight());
+            holder.to.setText(town);
+            holder.from.setText("From :"+parcels.get(position).getSender().getTown());
+            holder.sender.setText("Sender :"+parcels.get(position).getSender().getPhone());
+            holder.reciever.setText("Consignee :"+parcels.get(position).getReciever().getPhone());
+            holder.weight.setText(weight);
+            holder.price.setText(String.valueOf(parcels.get(position).getPrice()));
+        }catch (Exception e){
+
         }
+
+       }
 
     @Override
     public int getItemCount() {
@@ -48,6 +57,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         public TextView weight;
         public TextView sender;
         public TextView reciever;
+        public TextView price;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -56,7 +66,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             weight=(TextView)itemView.findViewById(R.id.ParcelWeight);
             sender=(TextView)itemView.findViewById(R.id.parcelSender);
             reciever=(TextView)itemView.findViewById(R.id.ParcelReciever);
-
+            price=(TextView)itemView.findViewById(R.id.parcelPrice);
 
         }
 

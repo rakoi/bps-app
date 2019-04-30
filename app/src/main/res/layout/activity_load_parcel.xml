@@ -25,6 +25,7 @@
         >
         <EditText
             android:layout_width="300dp"
+            android:id="@+id/loadParcelInpput"
             android:layout_height="40dp"
             android:background="@drawable/inputstyle"
             />
