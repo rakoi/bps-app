@@ -40,13 +40,25 @@ public class LoginActivity extends AppCompatActivity {
         email.setText(sharedPreferences.getString("email",""));
        String password=sharedPreferences.getString("password","");
         int userid=sharedPreferences.getInt("id",0);
-        if (userid>0){
+        if (userid!=0){
             startActivity(new Intent(this,MainActivity.class));
         }
 
 
 
     }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        sharedPreferences=getSharedPreferences("bps", Context.MODE_PRIVATE);
+        int userid=sharedPreferences.getInt("id",0);
+        if (userid!=0){
+            startActivity(new Intent(this,MainActivity.class));
+        }
+
+    }
+
     public void LoginBtn(View view){
 
         EditText emailField=(EditText)findViewById(R.id.email);

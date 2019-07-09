@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AppAPIClient {
 
-    public static final String url="http://192.168.43.168:8080/api/";
+    public static final String url="http://68.183.73.119/api/";
 
     public static Retrofit retrofit;
 

@@ -124,7 +124,7 @@ public class RecieveParcels extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Scan Items",Toast.LENGTH_SHORT).show();
             }else{
 
-                
+
                 progressDialog.setCancelable(false);
                 for (Parcel parcel:parcelArrayList){
                     recieveParcel(parcel.getEncodedId());
@@ -137,7 +137,7 @@ public class RecieveParcels extends AppCompatActivity {
 
                 parcelArrayList.clear();
                 adapter.notifyDataSetChanged();
-                Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
             }
         }
         return super.onOptionsItemSelected(item);
@@ -155,7 +155,7 @@ public class RecieveParcels extends AppCompatActivity {
                 @Override
                 public void onFailure(Call<Parcel> call, Throwable t) {
                     Toast.makeText(getApplicationContext(),"Unable to Proccess",Toast.LENGTH_SHORT).show();
-
+                    progressDialog.dismiss();
                 }
            });
     }

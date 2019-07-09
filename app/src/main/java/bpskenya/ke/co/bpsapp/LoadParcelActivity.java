@@ -158,8 +158,9 @@ public class LoadParcelActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<Parcel> call, Throwable t) {
+                    loadProgressDialog.dismiss();
                     Log.d("error",t.toString());
-                    Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_LONG).show();
 
                 }
             });
